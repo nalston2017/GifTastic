@@ -1,0 +1,47 @@
+body {
+    font-family: Arial;
+    font-size: 24px;
+    color: white;
+    font-weight:bold;
+    background-image: url("../images/football-background-7590.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button {
+  font-size: 24px;
+  color: white;
+  background-color: brown;
+  border-color: white;
+  margin: 10px 10px 10px 0px;
+  border-radius: 10px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.submit {
+  border-radius: 10px;
+  color: white;
+  background-color: brown;
+  border-color: white;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-style: solid;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 16px;
+}
+
+.imgContainer {
+    float: left;
+}

@@ -1,8 +1,8 @@
 // Create global variables including a topics array
-var topics = ["Eagles", "Patriots", "Vikings", "Redskins"];
-var NFLteamsrced = [];
+var topics = ["philadelphia eagles", "new england patriots", "minnesota vikings", "washington redskins"];
+var NFLteamsearched = [];
 var rating = "r"
-var limit = 10;
+var limit = 12;
 
 $(document).ready(function() {
   // Create button equal to each topic currently in the array. Set current buttons value = topics array
@@ -12,9 +12,10 @@ $(document).ready(function() {
       var teamButton = $("<button>");
       teamButton.attr({
         id: NFLteam,
-        class: "searchTeam",
+        class: "searchTeam .btn-default .btn-md",
         value: NFLteam,
       });
+
       teamButton.append(NFLteam);
       $("#gifButtons").append(teamButton);
     });
@@ -27,8 +28,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     // push the NFLteam searched and push it. .trim elliminates spaces
-    NFLteamsrced.push($("#searchInput").val().trim());
-    buttons(NFLteamsrced);
+    NFLteamsearched.push($("#searchInput").val().trim());
+    console.log(NFLteamsearched);
+    buttons(NFLteamsearched);
 
     // clear search value
     $("#searchInput").val("");
@@ -55,9 +57,9 @@ $(document).ready(function() {
           imageHTML.attr("data-animate", NFLteamdata[i].images.fixed_height.url);
           imageHTML.attr("data-state", "still");
           // putting everything in the container
-          createcontainer.prepend(ratingHTML);
-          createcontainer.prepend(imageHTML);
-          $("#gifImages").prepend(createcontainer);
+          createcontainer.append(ratingHTML);
+          createcontainer.append(imageHTML);
+          $("#gifImages").append(createcontainer);
         });
 
         // When user selects a gif play that gif. If the user selects it again stop the gif.
